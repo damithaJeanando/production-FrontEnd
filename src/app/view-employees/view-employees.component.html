@@ -1,0 +1,27 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">DOB</th>
+      <th scope="col">Address</th>
+      <th scope="col">Contact</th>
+      <th scope="col">Type</th>
+      <th scope="col">Username</th>
+      <th scope="col">Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees; let i=index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{employee.name}}</td>
+      <td>{{employee.dob}}</td>
+      <td>{{employee.address}}</td>
+      <td>{{employee.contactNum}}</td>
+      <td>{{employee.empType}}</td>
+      <td>{{employee.username}}</td>
+      <td>{{employee.password}}</td>
+    </tr>
+    
+  </tbody>
+</table>
