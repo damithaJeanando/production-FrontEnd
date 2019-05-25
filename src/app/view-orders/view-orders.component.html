@@ -1,3 +1,23 @@
-<p>
-  view-orders works!
-</p>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Order ID</th>
+      <th scope="col">Deadline</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">End Date</th>
+      <th scope="col">Order Item</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders; let i=index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{order.orderId}}</td>
+      <td>{{order.orderDeadline}}</td>
+      <td>{{order.startDate}}</td>
+      <td>{{order.endDate}}</td>
+      <td>{{order.orderItems}}</td>
+    </tr>
+    
+  </tbody>
+</table>

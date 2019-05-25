@@ -1,0 +1,21 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Plan ID</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">End Date</th>
+      <th scope="col">Address</th>
+      <th scope="col">Work Schedule ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let capacityPlan of capacityPlans; let i=index" >
+      <th scope="row">{{i+1}}</th>
+      <td>{{capacityPlan.planId}}</td>
+      <td>{{capacityPlan.startDate}}</td>
+      <td>{{capacityPlan.endDate}}</td>
+      <td>{{capacityPlan.workSchedules}}</td>
+    </tr>
+    
+  </tbody>
+</table>

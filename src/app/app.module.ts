@@ -8,6 +8,11 @@ import { EmployeeComponent } from './employee/employee.component';
 import { ViewEmployeesComponent } from './view-employees/view-employees.component';
 import { ViewOrdersComponent } from './view-orders/view-orders.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { WorkScheduleComponent } from './work-schedule/work-schedule.component';
+import { ViewCapacityPlanComponent } from './view-capacity-plan/view-capacity-plan.component';
+import { ViewOrderItemsComponent } from './view-order-items/view-order-items.component';
+import { ViewOrderItemComponent } from './view-order-item/view-order-item.component';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +20,12 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     EmployeeComponent,
     ViewEmployeesComponent,
     ViewOrdersComponent,
-    NavBarComponent
+    NavBarComponent,
+    WorkScheduleComponent,
+    ViewCapacityPlanComponent,
+    ViewOrderItemsComponent,
+    ViewOrderItemComponent,
+    
   ],
   imports: [
     BrowserModule,

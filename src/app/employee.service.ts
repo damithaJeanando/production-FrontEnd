@@ -14,4 +14,8 @@ export class EmployeeService {
   getEmployees(){
     return this.http.get<Employee[]>(this.url+"allemployees");
   }
+
+  getEmployee(){
+    return this.http.get<Employee>(this.url+"allemployees");
+  }
 }

@@ -1,0 +1,26 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Order Item ID</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Order ID</th>
+      <th scope="col">Inspection ID</th>
+      <th scope="col">Product ID</th>
+      <th scope="col">Order Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let orderItem of OrderItems; let i=index" >
+      <th scope="row">{{i+1}}</th>
+      <td>{{orderItem.orderItemId}}</td>
+      <td>{{orderItem.quantity}}</td>
+      <td>{{orderItem.orderId}}</td>
+      <td>{{orderItem.inspectionId}}</td>
+      <td>{{orderItem.productId}}</td>
+      <td>{{orderItem.orderStatus}}</td>
+      
+    </tr>
+    
+  </tbody>
+</table>
