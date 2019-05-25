@@ -16,6 +16,10 @@ export class EmployeeService {
   }
 
   getEmployee(){
-    return this.http.get<Employee>(this.url+"allemployees");
+    return this.http.get<Employee>(this.url+"emp_id");
+  }
+
+  newEmployee(employee : Employee){
+    return this.http.post<Employee>(this.url+"new_ws", employee);
   }
 }

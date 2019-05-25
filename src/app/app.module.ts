@@ -11,6 +11,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { WorkScheduleComponent } from './work-schedule/work-schedule.component';
 import { ViewCapacityPlanComponent } from './view-capacity-plan/view-capacity-plan.component';
 import { ViewOrderItemComponent } from './view-order-item/view-order-item.component';
+import { BomComponent } from './bom/bom.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ViewOrderItemComponent } from './view-order-item/view-order-item.compon
     WorkScheduleComponent,
     ViewCapacityPlanComponent,
     ViewOrderItemComponent,
+    BomComponent,
     
   ],
   imports: [

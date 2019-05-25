@@ -6,6 +6,7 @@ import { ViewOrdersComponent } from './view-orders/view-orders.component';
 import { WorkScheduleComponent } from './work-schedule/work-schedule.component';
 import { ViewCapacityPlanComponent } from './view-capacity-plan/view-capacity-plan.component';
 import { ViewOrderItemComponent } from './view-order-item/view-order-item.component';
+import { BomComponent } from './bom/bom.component';
 
 const routes: Routes = [
 {path:"view-employees", component:ViewEmployeesComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
 {path:"view-orders", component:ViewOrdersComponent},
 {path:"work-schedule", component:WorkScheduleComponent},
 {path:"view-capacity-plan", component:ViewCapacityPlanComponent},
-{path:"view-order-item", component:ViewOrderItemComponent}
+{path:"view-order-item", component:ViewOrderItemComponent},
+{path:"bom", component:BomComponent}
 
 
                         ];
