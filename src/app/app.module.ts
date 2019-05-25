@@ -10,7 +10,6 @@ import { ViewOrdersComponent } from './view-orders/view-orders.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { WorkScheduleComponent } from './work-schedule/work-schedule.component';
 import { ViewCapacityPlanComponent } from './view-capacity-plan/view-capacity-plan.component';
-import { ViewOrderItemsComponent } from './view-order-items/view-order-items.component';
 import { ViewOrderItemComponent } from './view-order-item/view-order-item.component';
 
 
@@ -23,7 +22,6 @@ import { ViewOrderItemComponent } from './view-order-item/view-order-item.compon
     NavBarComponent,
     WorkScheduleComponent,
     ViewCapacityPlanComponent,
-    ViewOrderItemsComponent,
     ViewOrderItemComponent,
     
   ],
