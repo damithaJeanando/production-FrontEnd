@@ -14,4 +14,9 @@ export class BomService {
   getBOM(){
     return this.http.get<BOM>(this.url+"bom_id");
   }
+
+  getBomByOrderItemId(orderItemId : String){
+    return this.http.get<BOM>(this.url+"order-item/"+orderItemId);
+  }
+
 }

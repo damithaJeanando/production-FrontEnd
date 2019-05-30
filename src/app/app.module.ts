@@ -14,6 +14,7 @@ import { ViewOrderItemComponent } from './view-order-item/view-order-item.compon
 import { BomComponent } from './bom/bom.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { BomComponent } from './bom/bom.component';
     ViewCapacityPlanComponent,
     ViewOrderItemComponent,
     BomComponent,
+   
     
   ],
   imports: [

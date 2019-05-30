@@ -11,7 +11,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let orderItem of OrderItems; let i=index" >
+    <tr *ngFor="let orderItem of orderItems; let i=index" [routerLink]="[orderItem.orderItemId]" >
       <th scope="row">{{i+1}}</th>
       <td>{{orderItem.orderItemId}}</td>
       <td>{{orderItem.quantity}}</td>
@@ -25,5 +25,5 @@
   </tbody>
 </table>
 
-<header>Bill Of Materials</header>
-<app-bom></app-bom>
+<router-outlet></router-outlet>
+

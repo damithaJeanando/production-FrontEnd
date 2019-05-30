@@ -16,5 +16,9 @@ export class CapacityPlanService {
     return this.http.get<CapacityPlan[]>(this.url+"capacity_plans")
   }
 
+  getCapacityPlan(id : String){
+    return this.http.get<CapacityPlan>(this.url+id)
+  }
+
   
 }

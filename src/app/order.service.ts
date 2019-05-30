@@ -17,5 +17,8 @@ export class OrderService {
       return this.http.get<Order[]>(this.url+"order")
     }
   
+    getOrder(id : String){
+      return this.http.get<Order>(this.url+id)
+    }
    
 }

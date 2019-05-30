@@ -12,10 +12,17 @@ const routes: Routes = [
 {path:"view-employees", component:ViewEmployeesComponent},
 {path:"employees", component:EmployeeComponent},
 {path:"view-orders", component:ViewOrdersComponent},
-{path:"work-schedule", component:WorkScheduleComponent},
+
 {path:"view-capacity-plan", component:ViewCapacityPlanComponent},
-{path:"view-order-item", component:ViewOrderItemComponent},
-{path:"bom", component:BomComponent}
+
+{path:"view-orders/:order-id", component:ViewOrderItemComponent, children:[
+  {path:":orderItemId", component:BomComponent}
+]},
+
+{path:"view-capacity-plan/:plan-id", component:WorkScheduleComponent, children:[
+  {path:":scheduleId", component:WorkScheduleComponent}
+]}
+
 
 
                         ];

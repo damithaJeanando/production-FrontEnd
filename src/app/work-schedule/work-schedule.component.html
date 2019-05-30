@@ -24,6 +24,34 @@
   </div>
     
   
-  <button type="submit" class="btn btn-secondary btn-lg btn-block">Submit</button>
+  <button type="submit" class="btn btn-secondary btn-lg btn-block" >Submit</button>
 </form>
 </div>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Work Schedule ID</th>
+      <th scope="col">Plan ID</th>
+      <th scope="col">Start Time</th>
+      <th scope="col">End Time</th>
+      <th scope="col">Date</th>
+      <th scope="col">Employee ID</th>
+      <th scope="col">Order Item ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let workSchedule of workSchedules; let i=index" [routerLink]="[workSchedule.scheduleId]" >
+      <th scope="row">{{i+1}}</th>
+      <td>{{workSchedule.scheduleId}}</td>
+      <td>{{workSchedule.planId.planId}}</td>
+      <td>{{workSchedule.startTime}}</td>
+      <td>{{workSchedule.endTime}}</td>
+      <td>{{workSchedule.date}}</td>
+      <td>{{workSchedule.empId}}</td>
+      <td>{{workSchedule.orderItemId}}</td>
+      
+    </tr>
+
+    <!-- <router-outlet></router-outlet> -->

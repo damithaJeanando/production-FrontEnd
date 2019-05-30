@@ -1,6 +1,11 @@
+import { BOM } from './../Models/BOM';
+import { BomService } from './../bom.service';
+import { Order } from './../Models/Order';
 import { Component, OnInit } from '@angular/core';
 import { OrderItem } from '../Models/OrderItem';
 import { OrderItemService } from '../order-item.service';
+import { ActivatedRoute } from '@angular/router';
+import { OrderService } from '../order.service';
 
 @Component({
   selector: 'app-view-order-item',
@@ -9,14 +14,23 @@ import { OrderItemService } from '../order-item.service';
 })
 export class ViewOrderItemComponent implements OnInit {
 
-  orderItem : OrderItem;
+  order : Order;
+  orderItems : OrderItem[]=[];
+  bom : BOM;
 
-  constructor(private orderItemService:OrderItemService) { }
+  constructor(private orderService:OrderService, private route : ActivatedRoute, private bomService : BomService) { }
 
   ngOnInit() {
-    this.orderItemService.getOrderItem().subscribe(orderItem => {
-      this.orderItem = orderItem;
-  })
+    this.route.paramMap.subscribe(para => {
+      let id = para.get("order-id");
+      this.orderService.getOrder(id).subscribe(order => {
+        this.order = order;
+        this.orderItems = order.orderItems;
+    })
+    })
+ 
 }
+
+
 
 }

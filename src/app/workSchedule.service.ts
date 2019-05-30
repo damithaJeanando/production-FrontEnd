@@ -16,8 +16,11 @@ export class WorkScheduleService {
     return this.http.get<WorkSchedule[]>(this.url+"allworkschedules");
   }
 
-  getWorkSchedule(){
-    return this.http.get<WorkSchedule>(this.url+"ws_id");
+  getWorkSchedulesByPlanId(planId : String){
+    return this.http.get<WorkSchedule[]>(this.url+"view-capacity-plan/"+planId);
+  }
+  getWorkSchedule(id : String){
+    return this.http.get<WorkSchedule>(this.url+id)
   }
 
   addWorkSchedule(workSchedule : WorkSchedule){

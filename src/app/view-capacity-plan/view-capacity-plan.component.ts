@@ -1,3 +1,5 @@
+import { WorkSchedule } from './../Models/WorkSchedule';
+import { WorkScheduleService } from './../workSchedule.service';
 import { CapacityPlanService } from './../capacity-plan.service';
 import { CapacityPlan } from './../Models/CapacityPlan';
 import { Component, OnInit } from '@angular/core';
@@ -10,6 +12,7 @@ import { Component, OnInit } from '@angular/core';
 export class ViewCapacityPlanComponent implements OnInit {
 
   capacityPlans : CapacityPlan[] = [];
+  
   constructor(private capacityPlanService : CapacityPlanService) { }
 
   ngOnInit() {

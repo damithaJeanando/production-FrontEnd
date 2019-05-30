@@ -11,7 +11,7 @@ export class OrderItemService {
 
   constructor(private http:HttpClient) { }
 
-  getOrderItem(){
-    return this.http.get<OrderItem>(this.url+"order_item_id")
+  getOrderItem(id:string){
+    return this.http.get<OrderItem>(this.url+id);
   }
 }

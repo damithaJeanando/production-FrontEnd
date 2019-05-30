@@ -1,3 +1,5 @@
+import { CapacityPlan } from './../Models/CapacityPlan';
+import { ActivatedRoute } from '@angular/router';
 import { WorkScheduleService } from './../workSchedule.service';
 import { WorkSchedule } from './../Models/WorkSchedule';
 import { Component, OnInit } from '@angular/core';
@@ -9,14 +11,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkScheduleComponent implements OnInit {
 
-  workSchedule : WorkSchedule 
-
-  constructor(private workScheduleService : WorkScheduleService) { }
+  // workSchedule : WorkSchedule;
+  workSchedules : WorkSchedule[] = []; 
+  capacityPlan : CapacityPlan;
+  
+  constructor(private workScheduleService : WorkScheduleService, private route : ActivatedRoute) { }
 
   ngOnInit() {
-    this.workScheduleService.addWorkSchedule(this.workSchedule).subscribe(workSchedule => {
-      this.workSchedule = workSchedule;
-      })
-  }
+    
+
+    this.route.paramMap.subscribe(para => {
+      let id = para.get("plan-id");
+      this.workScheduleService.getWorkSchedulesByPlanId(id).subscribe(workSchedule => {
+        console.log(workSchedule)
+        this.workSchedules = workSchedule;
+        //this.workSchedules = workSchedule.orderItemId;
+    })
+    })
+      
+      
+   }
+
+  
 
 }
