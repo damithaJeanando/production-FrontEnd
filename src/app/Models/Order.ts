@@ -2,10 +2,13 @@ import { OrderItem } from './OrderItem';
 
 export interface Order{
 
-    orderId:string;
+    ord_id:string;
     orderDeadline:Date;
-    startDate:Date;
-    endDate:Date;
+    date:Date;
+    dele_date:Date;
 
-    orderItems:OrderItem[];
+    products:OrderItem[];
+
+    completionDate:string;
+    orderStatus:string;
 }

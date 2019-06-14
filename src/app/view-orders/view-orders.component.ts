@@ -14,10 +14,8 @@ export class ViewOrdersComponent implements OnInit {
   constructor(private orderService:OrderService) { }
 
   ngOnInit() {
-    this.orderService.getOrders().subscribe(orders => {
-      this.orders = orders;
-      console.log(orders)
-    })
+    this.orderService.getOrders();
+    
   }
 
   

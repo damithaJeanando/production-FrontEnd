@@ -3,18 +3,16 @@
     <tr >
       <th scope="col">#</th>
       <th scope="col">Order ID</th>
-      <th scope="col">Deadline</th>
       <th scope="col">Start Date</th>
       <th scope="col">End Date</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let order of orders; let i=index" [routerLink]="[order.salesOrderId]">
+    <tr *ngFor="let order of orderService.orders; let i=index" [routerLink]="[order.ord_id]">
       <th scope="row">{{i+1}}</th>
-      <td>{{order.orderId}}</td>
-      <td>{{order.orderDeadline}}</td>
-      <td>{{order.startDate}}</td>
-      <td>{{order.endDate}}</td>
+      <td>{{order.ord_id}}</td>
+      <td>{{order.date}}</td>
+      <td>{{order.dele_date}}</td>
     </tr>
     
   </tbody>

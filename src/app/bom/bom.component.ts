@@ -18,8 +18,7 @@ export class BomComponent implements OnInit {
     this.route.paramMap.subscribe(para => {
       let id = para.get("orderItemId");
       this.getBom(id)
-    })
-    
+    }) 
   }
 
   getBom(orderItemId : String){
@@ -28,7 +27,5 @@ export class BomComponent implements OnInit {
       
     })
   }
-
-  
 
 }
