@@ -1,0 +1,50 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Inspection ID</th>
+      <th scope="col">Date/Time</th>
+      <th scope="col">Employee ID</th>
+      <th scope="col">Order Item ID</th>
+      <th scope="col">Inspection Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let inspection of inspections; let i=index" >
+      <th scope="row">{{i+1}}</th>
+      <td>{{inspection.inspectionId}}</td>
+      <td>{{inspection.dateTime}}</td>
+      <td>{{inspection.empId}}</td>
+      <td>{{inspection.orderItemId}}</td>
+      <td>{{inspection.inspectionStatus}}</td>
+    </tr>   
+  </tbody>
+</table>
+
+<div class="container mt-3" >
+  <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Notice Date</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Notice Date">  
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Rejection Reason</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Rejection Reason">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Remedy Action</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Remedy Action">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Order Item ID</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Order Item">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Status</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Status">
+  </div>
+  <button type="submit" class="btn btn-secondary btn-lg btn-block" >Create Rejection Notice</button>
+</form>
+</div>
+
+

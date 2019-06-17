@@ -14,10 +14,19 @@ export class ViewOrdersComponent implements OnInit {
   constructor(private orderService:OrderService) { }
 
   ngOnInit() {
-    this.orderService.getOrders();
+    this.orderService.getOrders().subscribe(orders => {
+      this.orders = orders;
+      console.log(orders)
+    });
+    
     
   }
 
+  saveOrder(id){
+    this.orderService.saveOrder(id).subscribe(order => {
+      console.log(order)
+    })
+  }
   
 
 }

@@ -18,13 +18,15 @@ export class OrderService {
     
     getOrders() {
       
-      return this.http.get<Order[]>(this.salesUrl).subscribe(orders => {
-        this.orders = orders;
-      })
+      return this.http.get<Order[]>(this.url+"order")
     }
   
     getOrder(id : String){
       return this.http.get<Order>(this.url+id)
+    }
+
+    saveOrder(order:Order){
+      return this.http.post<Order>(this.url+"new_order",order)
     }
    
 }

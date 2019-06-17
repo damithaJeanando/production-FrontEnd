@@ -5,14 +5,24 @@
       <th scope="col">Order ID</th>
       <th scope="col">Start Date</th>
       <th scope="col">End Date</th>
+      <th scope="col">Status</th>
+      <th scope="col">Completion Date</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let order of orderService.orders; let i=index" [routerLink]="[order.ord_id]">
+    <tr *ngFor="let order of orders; let i=index" [routerLink]="[order.ord_id]">
       <th scope="row">{{i+1}}</th>
       <td>{{order.ord_id}}</td>
       <td>{{order.date}}</td>
       <td>{{order.dele_date}}</td>
+      <td (click)="$event.stopPropagation()"><select [(ngModel)]="order.orderStatus" name="orderStatus">
+        <option value="pending">Pending</option>
+        <option value="completed">Completed</option>
+        <option value="new">New</option>
+      </select> </td>
+      <td><input [(ngModel)]="order.completionDate" name="completionDate" type="date"  (click)="$event.stopPropagation()"></td>
+      <td><button class="btn btn-primary" (click)="saveOrder(order.ord_id); $event.stopPropagation()">Add</button></td>
     </tr>
     
   </tbody>

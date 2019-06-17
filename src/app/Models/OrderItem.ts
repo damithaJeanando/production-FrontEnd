@@ -5,7 +5,7 @@ import { OrderStatus } from './OrderStatus';
 
 export interface OrderItem{
 
-    orderItemId:string;
+    orderItemId:number;
     quantity:number;
 
     orderId:Order;

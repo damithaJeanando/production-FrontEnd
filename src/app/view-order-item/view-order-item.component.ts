@@ -23,8 +23,12 @@ export class ViewOrderItemComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe(para => {
       let id = para.get("order-id");
-      this.order = this.orderService.orders.find(x => x.ord_id == id)
-    console.log(this.order)
+      this.orderService.getOrder(id).subscribe(order => {
+        this.order = order
+        this.orderItems = order.products;
+        console.log(order)
+      })
+    console.log(id)
 
     })
  
